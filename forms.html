@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Car || Form</title>
+  </head>
+  <body>
+    <form class="deal width">
+      <h1>What's your dream car?</h1>
+      <!-- dealer -->
+      <label for="cars">Choose dealer:</label>
+      <select name="cardealer" id="cars" required>
+        <option value=""></option>
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="volkswagen">Volkswagen</option>
+        <option value="volvo">Volvo</option>
+        <option value="ford">Ford</option>
+        <option value="nissan">Nissan</option>
+        <option value="fiat">Fiat</option>
+      </select>
+      <!-- model -->
+      <label for="name">Type a model:</label>
+      <input
+        type="text"
+        id="name"
+        name="carmodel"
+        required
+        minlength="2"
+        maxlength="10"
+        size="10"
+      />
+      <!-- horsePower -->
+      <label for="hp">How much horsepower?</label>
+      <input
+        type="number"
+        id="hp"
+        name="carpower"
+        required
+        minlength="3"
+        maxlength="3"
+        size="10"
+      />
+      <!-- year -->
+      <label for="year">Year of release</label>
+      <input
+        type="number"
+        id="year"
+        name="caryear"
+        required
+        minlength="4"
+        maxlength="4"
+      />
+      <!-- color -->
+      <label for="color">Choose or type a color</label>
+      <input list="colors" name="carcolor" required id="color" />
+      <datalist id="colors">
+        <option value="Black" selected>Black</option>
+        <option value="White"> </option>
+        <option value="Gray"> </option>
+        <option value="Rainbow"> </option>
+      </datalist>
+      <!-- SUBMIT BUTTON -->
+      <button type="submit" name="submit" id="submitting">Submit</button>
+    </form>
+    <div class="fullscreen">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="carData">
+      <main>
+        <template>
+          <article>
+            <h1>company</h1>
+            <img src="" class="carImg" />
+            <h2>model</h2>
+            <h3>color</h3>
+            <p>horsepower</p>
+            <button class="remove">Remove</button>
+          </article>
+        </template>
+      </main>
+    </div>
+    <!-- <div class="comment">
+       <form action="https://www.google.com/search" name="myForm">
+      <label for="google">Search</label>
+      <input type="text" name="q" autocomplete="off" />
+      <input type="submit" />
+    </form>
+    <form>
+      <label for="mail">I would like you to provide me an e-mail</label>
+      <input type="email" id="mail" name="mail" />
+      <button>Submit</button>
+    </form>
+    <form novalidate>
+      <p>
+        <label for="mail">
+          <span>Please enter an email address:</span>
+          <input type="email" id="mail" name="mail" />
+          <span class="error" aria-live="polite"></span>
+        </label>
+      </p>
+      <button>Submit</button>
+    </form> 
+    </div>-->
+    <script src="js.js"></script>
+  </body>
+  <footer>
+    <div class="terms">
+      <h5>This database form-filling thing was made by Jonas</h5>
+    </div>
+  </footer>
+</html>
